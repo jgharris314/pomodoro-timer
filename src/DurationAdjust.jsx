@@ -28,8 +28,6 @@ const DurationAdjust = ({values, setValues}) => {
   }
 
 
-
-
 return (
     <>
     <div className="row">

@@ -5,14 +5,14 @@ import TimerControls from "../TimerControls.jsx";
 import Timer from "../Timer.jsx";
 
 function Pomodoro() {
-  // Timer starts out paused
+  
   const initialState = {
     displayTimer: false,
     focusVal: 25,
     focusInc: 5,
     focusMin: 5,
     focusMax: 60,
-    count: 1, //focusVal * 60
+    count: 1, 
     breakVal: 5,
     breakInc: 1,
     breakMin: 1,
@@ -22,8 +22,6 @@ function Pomodoro() {
   }
 
   const [values, setValues] = useState({...initialState})
-
-  
 
   useInterval(() => {
      if(values.isRunning){
@@ -40,8 +38,6 @@ function Pomodoro() {
     }
      
   }, values.isRunning ? 1000 : null);
-
-  ////There is clearly some combining i could do here
 
   return (
     <div className="pomodoro"> 

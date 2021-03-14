@@ -28,9 +28,7 @@ const Timer = ({values}) => {
         <div className={values.displayTimer ? null : "hidden"}>
         <div className="row mb-2">
           <div className="col">
-            {/* TODO: Update message below to include current session (Focusing or On Break) and total duration */}
             <h2 data-testid="session-title">{`${sessionStatus} for ${remaining} minutes`}</h2>
-            {/* TODO: Update message below to include time remaining in the current session */}
             <p className="lead" data-testid="session-sub-title">
              {secondsToDuration(values.count)} remaining 
             </p>
@@ -48,13 +46,13 @@ const Timer = ({values}) => {
                   values.focusing
                   ? getPercent(values.count, values.focusVal * 60, )
                   : getPercent(values.count, values.breakVal * 60)
-                } // TODO: Increase aria-valuenow as elapsed time increases
+                } 
                 style={{ width: `${
                           values.focusing
                           ? getPercent(values.count, values.focusVal * 60, )
                           : getPercent(values.count, values.breakVal * 60)
                  }%`
-                 }} // TODO: Increase width % as elapsed time increases
+                 }} 
               />
               </div>
             </div>
